@@ -9,7 +9,7 @@
   display: -webkit-flex;
   justify-content: center;
   align-items: center;
-  z-index: 999999;
+  z-index: 999999999;
 }
 
 #xyhLoading #xyhLoadingInfo {

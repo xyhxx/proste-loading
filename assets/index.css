@@ -1,0 +1,55 @@
+#xyhLoading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+#xyhLoading #xyhLoadingInfo {
+  width: 75%;
+  max-width: 350px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  position: relative;
+}
+
+#xyhLoading #xyhLoadingInfo img {
+  width: 100%;
+}
+
+#xyhLoading #xyhLoadingInfo #xyhLoadingInfoContent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 15%;
+}
+
+#xyhLoading #xyhLoadingInfo #xyhLoadingInfoContent img {
+  width: 30%;
+}
+
+#xyhLoading #xyhLoadingInfo #xyhLoadingInfoContent p {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  padding-top: 5%;
+  width: 100%;
+}

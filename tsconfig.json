@@ -7,5 +7,6 @@
     "strict": true,
     "lib": [ "es2020", "dom" ],
     "moduleResolution": "node",
+    "suppressImplicitAnyIndexErrors": true,
   },
 }

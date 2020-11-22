@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "description": "基于vue3开发的loading插件",
   "main": "./dist/index.js",
-  "author": "xyh_xx(xyh050968@gmail.com)",
+  "author": "xyh_xx(603331487@qq.com)",
   "license": "ISC",
-  "dependencies": {
-    "typescript": "^4.1.2",
-    "vue": "^3.0.2"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xyhxx/proste-loading.git"
@@ -24,5 +21,9 @@
     "loading",
     "plugin",
     "load"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "vue": "^3.0.2"
+  }
 }

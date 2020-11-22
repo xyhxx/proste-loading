@@ -6,6 +6,12 @@
 
 ### 初始化插件能力
 
+| Param |  Type     | Description       |
+| :---- | :----:    | :---------------  |
+| fontSize?  | Number   | 提示语句字体大小 |
+| color?   | String    | 字体颜色    |
+| content?   | String    | 默认加载文字内容    |
+
 ``` vue
 <!-- App.vue -->
 
@@ -21,7 +27,7 @@ export default {
   name: 'App',
   setup(){
     // 提供loading—hook能力
-    provideLoad();
+    provideLoad({fontSize: 15, color: "#f44336", content: '默认加载文字'});
   },
   components: {
     HelloWorld
@@ -36,8 +42,8 @@ export default {
 | Param |  Type     | Description       |
 | :---- | :----:    | :---------------  |
 | type  | Boolean   | 是否展示            |
-| msg   | String    | loading 提示语句(可选)    |
-| duration   | Number    | 持续时间(可选)    |
+| content?   | String    | loading 提示语句    |
+| duration?   | Number    | 持续时间    |
 
 
 ``` vue
@@ -58,7 +64,11 @@ export default {
   setup(){
     // 继承使用hook
     const loading = useLoad();
-    loading(true, '加载中', 2000);
+    loading({type: true, content: '正在加载', duration: 1000});
+
+    setTimeout(() => {
+      loading({type: true});
+    }, 2000);
   },
   props: {
     msg: String

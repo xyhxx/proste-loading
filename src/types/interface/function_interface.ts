@@ -1,3 +1,9 @@
-type vuePluginLoading = (type: boolean, msg?: string, duration?: number) => void;
+interface Ioptions{
+  type: boolean;
+  content?: string;
+  duration?: 0;
+}
 
-export default vuePluginLoading;
+type vuePluginLoading = (options: Ioptions) => void;
+
+export {vuePluginLoading, Ioptions};

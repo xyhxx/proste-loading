@@ -1,5 +1,3 @@
-[中文文档](../README.MD) | 英文文档
-
 # Loading plugin based on vue3
 
 >  proste： Polish, simple, really can not find any fun words, originally wanted to use tiga (an Ultraman), but feel too naive...
@@ -36,8 +34,8 @@ export default {
 | Param |  Type     | Description       |
 | :---- | :----:    | :---------------  |
 | type  | Boolean   | is show plugin            |
-| msg   | String    | loading content    |
-| duration   | Number    | duration    |
+| msg?   | String    | loading content    |
+| duration?   | Number    | duration    |
 
 
 ``` vue

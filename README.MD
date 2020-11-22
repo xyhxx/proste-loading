@@ -1,4 +1,4 @@
-中文文档 | [英文文档](./en/README.MD)
+中文文档 | [Englist](./en/README.MD)
 
 # 基于Vue3的loading插件
 

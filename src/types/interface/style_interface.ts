@@ -1,8 +1,8 @@
-interface IstyleInfo{
+interface ProsteLoadingStyleInfo{
   fontSize?: number;
   color?: string;
   content?: string;
 }
-type IstyleInfoFunction = (options: IstyleInfo) => void;
+type styleInfoFunction = (options: ProsteLoadingStyleInfo) => void;
 
-export {IstyleInfo, IstyleInfoFunction};
+export {ProsteLoadingStyleInfo, styleInfoFunction};

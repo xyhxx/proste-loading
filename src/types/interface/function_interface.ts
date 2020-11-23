@@ -1,9 +1,10 @@
-interface Ioptions{
+interface ProsteLoadingOptions{
   type: boolean;
   content?: string;
-  duration?: 0;
+  duration?: number;
 }
 
-type vuePluginLoading = (options: Ioptions) => void;
+type prosteLoading = (options: ProsteLoadingOptions) => void;
+type useProsteLoading = () => prosteLoading;
 
-export {vuePluginLoading, Ioptions};
+export {prosteLoading, ProsteLoadingOptions, useProsteLoading};

@@ -4,10 +4,10 @@ import loadingBg from '../assets/img/loadingBg.png';
 import loadingImg from '../assets/img/loading.gif';
 import '../assets/index.css';
 // 导入类型
-import {vuePluginLoading} from './types/interface/function_interface';
+import {prosteLoading, ProsteLoadingOptions, useProsteLoading } from './types/interface/function_interface';
 import {
-  IstyleInfo as styleOptions, 
-  IstyleInfoFunction as styleFunction
+  ProsteLoadingStyleInfo, 
+  styleInfoFunction as styleFunction
 } from './types/interface/style_interface';
 
 // 定义插件名称 防止冲突
@@ -15,7 +15,7 @@ const prostePluginStyleInfoLoadingPlugin = Symbol('loadingPlugin');
 // 初始化状态信息
 const prostePluginState = reactive({ isShowLoading: false, loadingMsg: '加载中' });
 // 初始化样式信息
-const prostePluginStyleInfo = reactive<styleOptions>({
+const prostePluginStyleInfo = reactive<ProsteLoadingStyleInfo>({
   fontSize: 15,
   color: '#666666',
 });
@@ -46,7 +46,7 @@ if (!el) {
 }
 el = null;
 // 显示控制器
-const loadingControl: vuePluginLoading = ({type, content = prostePluginNormal, duration = 0}) => {
+const loadingControl: prosteLoading = ({type, content = prostePluginNormal, duration = 0}: ProsteLoadingOptions) => {
   prostePluginState.isShowLoading = type;
   prostePluginState.loadingMsg = content;
   if(duration && duration > 0){
@@ -54,7 +54,7 @@ const loadingControl: vuePluginLoading = ({type, content = prostePluginNormal, d
   }
 };
 
-export const provideLoad: styleFunction = (options: styleOptions) =>{
+export const provideLoad: styleFunction = (options: ProsteLoadingStyleInfo) =>{
   if (options) {
     for(const key in options){
       if(key === 'content'){
@@ -68,8 +68,8 @@ export const provideLoad: styleFunction = (options: styleOptions) =>{
   provide(prostePluginStyleInfoLoadingPlugin, loadingControl);
 };
 
-export const useLoad: () => vuePluginLoading = () => {
-  const plugin: vuePluginLoading | undefined = inject(prostePluginStyleInfoLoadingPlugin);
+export const useLoad: useProsteLoading = () => {
+  const plugin: prosteLoading | undefined = inject(prostePluginStyleInfoLoadingPlugin);
   
   if(!plugin){
     throw new Error('Please use the [provideload] function on the App.vue before using this function');
@@ -77,4 +77,3 @@ export const useLoad: () => vuePluginLoading = () => {
 
   return plugin;
 }
-

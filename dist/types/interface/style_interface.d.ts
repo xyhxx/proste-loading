@@ -3,5 +3,5 @@ interface ProsteLoadingStyleInfo {
     color?: string;
     content?: string;
 }
-declare type styleInfoFunction = (options: ProsteLoadingStyleInfo) => void;
+declare type styleInfoFunction = (options?: ProsteLoadingStyleInfo) => void;
 export { ProsteLoadingStyleInfo, styleInfoFunction };

@@ -54,7 +54,7 @@ const loadingControl: prosteLoading = ({type, content = prostePluginNormal, dura
   }
 };
 
-export const provideLoad: styleFunction = (options: ProsteLoadingStyleInfo) =>{
+export const provideLoad: styleFunction = (options) =>{
   if (options) {
     for(const key in options){
       if(key === 'content'){
@@ -77,3 +77,5 @@ export const useLoad: useProsteLoading = () => {
 
   return plugin;
 }
+
+export {ProsteLoadingStyleInfo, ProsteLoadingOptions}

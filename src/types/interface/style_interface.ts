@@ -3,6 +3,6 @@ interface ProsteLoadingStyleInfo{
   color?: string;
   content?: string;
 }
-type styleInfoFunction = (options: ProsteLoadingStyleInfo) => void;
+type styleInfoFunction = (options?: ProsteLoadingStyleInfo) => void;
 
 export {ProsteLoadingStyleInfo, styleInfoFunction};
